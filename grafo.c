@@ -9,10 +9,6 @@ grafo_t grafo_criar(int tam) {
     if (grafo == NULL) {
         return NULL;
     }
-    for (int i = 0; i < tam; i++) {
-        grafo[i].lista_vizinhos = NULL;
-        grafo[i].pacote_enviado = false;
-    }
     return grafo;
 }
 
