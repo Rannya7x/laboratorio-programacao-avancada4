@@ -8,9 +8,6 @@ struct evento_t {
     int tipo;
 
 };
-
-typedef struct evento_t evento_t;
-
 typedef struct lista_eventos_t {
     evento_t* evento;
     struct lista_eventos_t* proximo_evento;
