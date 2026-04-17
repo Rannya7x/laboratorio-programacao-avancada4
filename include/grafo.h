@@ -1,8 +1,7 @@
 #ifndef GRAFO_H
 #define GRAFO_H
 #include "stdbool.h"
-#include "include/lista_vizinhos.h"
-
+#include "lista_vizinhos.h"
 
 struct no_t {
     int id;

@@ -1,6 +1,6 @@
 #include "stdbool.h"
 #include "stdlib.h"
-#include "evento.h"
+#include "include/evento.h"
 
 struct evento_t {
     double tempo;
@@ -8,10 +8,10 @@ struct evento_t {
     int tipo;
 
 };
-typedef struct lista_eventos_t {
+struct lista_eventos_t {
     evento_t* evento;
     struct lista_eventos_t* proximo_evento;
-} lista_eventos_t;
+};
 
 evento_t* criar_evento(double tempo, int alvo, int tipo) {
     evento_t* novo_evento = (evento_t*)malloc(sizeof(evento_t));
