@@ -23,7 +23,7 @@ void simulacao_iniciar(lista_eventos_t **lista_eventos, grafo_t grafo){
             lista_vizinhos_t* atual_vizinho = grafo[evento_atual->alvo].lista_vizinhos;
             while (atual_vizinho != NULL) {
                 // Imprime log de repasse ANTES de criar o evento
-                lista_vizinhos_imprimir(atual_vizinho);
+                printf("\t--> Repassando pacote para o nó %d ...\n", atual_vizinho->vizinho);
                 
                 // Fórmula de tempo determinística 
                 double novo_tempo = evento_atual->tempo + (0.1 + (atual_vizinho->vizinho * 0.01));
