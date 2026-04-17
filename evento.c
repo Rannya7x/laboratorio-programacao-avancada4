@@ -2,16 +2,7 @@
 #include "stdlib.h"
 #include "include/evento.h"
 
-struct evento_t {
-    double tempo;
-    int alvo;
-    int tipo;
 
-};
-struct lista_eventos_t {
-    evento_t* evento;
-    struct lista_eventos_t* proximo_evento;
-};
 
 evento_t* criar_evento(double tempo, int alvo, int tipo) {
     evento_t* novo_evento = (evento_t*)malloc(sizeof(evento_t));
