@@ -5,7 +5,7 @@
 #include "include/lista_vizinhos.h"
 
 grafo_t grafo_criar(int tam) {
-    grafo_t grafo = (grafo_t*)malloc(sizeof(no_t) * tam);
+    grafo_t grafo = (grafo_t)malloc(sizeof(no_t) * tam);
     if (grafo == NULL) {
         return NULL;
     }
@@ -35,7 +35,7 @@ bool* grafo_pacote_enviado(grafo_t grafo, int id){
 
 void grafo_destruir(grafo_t grafo, int tam){
     for(int i = 0; i < tam; i++){
-        lista_vizinhos_destruir(grafo[i].lista_vizinhos);
+        lista_vizinhos_destruir(&grafo[i].lista_vizinhos);
     }
     free(grafo);
 }
