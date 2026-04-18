@@ -14,13 +14,6 @@ bool lista_vizinhos_adicionar(int vizinho, lista_vizinhos_t **lista){
     return true;
 }
 
-void lista_vizinhos_imprimir(lista_vizinhos_t *lista){
-    lista_vizinhos_t *atual = lista;
-    while(atual != NULL){
-        printf("\t--> Repassando pacote para o nó %d ...\n", atual->vizinho);
-        atual = atual->proximo;
-    }
-}
 void lista_vizinhos_destruir(lista_vizinhos_t **lista){
     lista_vizinhos_t *atual = *lista;
     while(atual != NULL){
